@@ -13,27 +13,36 @@ def unique_houses(filename):
             ])
 
     """
+    
     houses = set()
 
     cohort_data = open("cohort_data.txt")
 
+    # start for loop that's looping through the file
     for line in cohort_data:
         line.rstrip()
-        order = line.split("|")
-
-        # print order
+        data = line.split("|")
+        houses.add(data[2])
+        # print data
         # break
-    
 
-    for house in houses:
-        house.add(order[2])
+    # for house in data:
+    #     house.add(data) 
+    # end of the for loop that's looping thorugh the file
+
+        # print houses
+        # break
+
+    # start of for loop looping through an empty set (danger!!)
+    
+        
+    # end of loop through empty set
 
     return houses
-    print houses
 
     cohort_data.close()
 
-unique_houses("cohort_data.txt")
+print unique_houses("cohort_data.txt")
 
 # def sort_by_cohort(filename):
 #     """TODO: Sort students by cohort.
